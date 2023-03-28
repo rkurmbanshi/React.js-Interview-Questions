@@ -22,20 +22,6 @@
 
 - What is context API in react
 
-- What is callback
-
-- What is currying
-
-- What is async await explain with an example
-
-- What is promise in javascript
-
-- What is an event loop
-
-- What is event handling
-
-- Explain call, apply, and bind
-
 - Explain local storage and session storage and how to secure both storages
 
 - What are web workers
@@ -68,17 +54,9 @@
 
 - What is higher-order component
 
-- What is promise
-
 - Difference between Map and reduce
 
-- Difference between var and let and const
-
-- What is closure
-
 - What is react js and its pros and cons
-
-- What is VDOM
 
 - What is batching
 
@@ -89,8 +67,6 @@
 - What is pure component
 
 - What is pure function
-
-- What is HOC
 
 - What is useState
 
@@ -132,65 +108,19 @@
 
 - which lifecycle method performs an API call
 
-- what are async and await
-
-- what is callback
-
-- what is callback hell
-
-- what is closure
-
-- apply v/s call v/s bind
-
-- what is hoisting
-
-- explain let const and var
-
-- what is node
-
-- what is the process model
-
-- what is the event loop
-
-- how to include and module
-
-- what are modules
-
-- what are the core modules in the node
-
-- what is middleware in node
-
-- what is express
-
-- what is the HTTP module
-
 - how many ways to use CSS
 
-- what is box-sizing
+- what is box-sizing in CSS
 
-- absolute v/s relative
+- absolute v/s relative in CSS
 
 - what is Pseudo class
-
-- what is docker
-
-- what is the image in the docker
-
-- what containers in the docker
-
-- can we use multiple images in the docker container
 
 - what is modules css
 
 - difference between reset vs normalized CSS?
 
 - what are pseudo-elements and pseudo-classes
-
-- Write a function to check a string  palindrome(madam) or not in JavaScript
-
-- Write a function to get duplicate values from the array and its count in JavaScript
-
-- what is event delegation
 
 - how to call multiple APIs in one time
 
@@ -200,15 +130,7 @@
 
 - what is prop drilling
 
-- what is Currying in JavaScript
-
-- what is closure
-
-- what is the event loop
-
 - what styled component
-
-- Yash Technology:
 
 - what is doctype in HTML
 
@@ -221,8 +143,6 @@
 - what is sass
 
 - what is module CSS
-
-- what is VDOM
 
 - how to optimize your component
 
@@ -242,8 +162,6 @@
 
 - how to pass data from child to parent component
 
-- what is redux
-
 - what is context API
 
 - what you prefer redux and why not prefer context API
@@ -258,40 +176,20 @@
 
 - what is jest and react testing library
 
-- what promises
-
-- sync v/s async
-
 - optimization in react
 
 - useCallback and usememo
 
 - new features of new version of react-router
 
-- what is rest and spread operator
-
 - give an example of object destructuring
-
-- remove a duplicate element from the array
 
 - SyntheticEvent in react js
 
 - how to check your event in different browsers
 
-- what is event emitter
-
 - what are redux components
 
 - explain lazy loading in detail in react js
-
-- explain the event loop in detail
-
-- explain HOC with an example
-
-- explain your roles and responsibility
-
-- explain any challenge between one year
-
-- how to update you with the new technology
 
 - what is the disadvantage of react js
