@@ -90,106 +90,106 @@
 
 - useMemo/react.memo
 
-- what is the lifecycle in the class component
+- What is the lifecycle in the class component
 
-- what is component Should Update lifecycle method
+- What is component Should Update lifecycle method
 
-- state v/s props
+- State v/s props
 
-- how to pass data by child component to the parent component
+- How to pass data by child component to the parent component
 
-- what are controlled and uncontrolled component
+- What are controlled and uncontrolled component
 
-- what is stateless and stateful component
+- What is stateless and stateful component
 
-- what is prop drilling
+- What is prop drilling
 
-- how to manage API calls in react js
+- How to manage API calls in react js
 
-- which lifecycle method performs an API call
+- Which lifecycle method performs an API call
 
-- how many ways to use CSS
+- How many ways to use CSS
 
-- what is box-sizing in CSS
+- What is box-sizing in CSS
 
-- absolute v/s relative in CSS
+- Absolute v/s relative in CSS
 
-- what is Pseudo class
+- What is Pseudo class
 
-- what is modules css
+- What is modules css
 
-- difference between reset vs normalized CSS?
+- Difference between reset vs normalized CSS?
 
-- what are pseudo-elements and pseudo-classes
+- What are pseudo-elements and pseudo-classes
 
-- how to call multiple APIs in one time
+- How to call multiple APIs in one time
 
-- what is redux
+- What is redux
 
-- what is context API
+- What is context API
 
-- what is prop drilling
+- What is prop drilling
 
-- what styled component
+- What styled component
 
-- what is doctype in HTML
+- What is doctype in HTML
 
-- what are meta tags
+- What are meta tags
 
-- what are semantic elements
+- What are semantic elements
 
-- what are styled-components
+- What are styled-components
 
-- what is sass
+- What is sass
 
-- what is module CSS
+- What is module CSS
 
-- how to optimize your component
+- How to optimize your component
 
-- what is useState
+- What is useState
 
-- what is useEffect
+- What is useEffect
 
-- what are class components
+- What are class components
 
-- what is component should update 
+- What is component should update 
 
-- diff between functional and class components
+- Diff between functional and class components
 
-- what are state and props
+- What are state and props
 
-- what is prop drilling
+- What is prop drilling
 
-- how to pass data from child to parent component
+- How to pass data from child to parent component
 
-- what is context API
+- What is context API
 
-- what you prefer redux and why not prefer context API
+- What you prefer redux and why not prefer context API
 
-- what is action creator
+- What is action creator
 
-- what is saga
+- What is saga
 
-- how to call API with saga
+- How to call API with saga
 
-- how to auto-call API by redux and saga
+- How to auto-call API by redux and saga
 
-- what is jest and react testing library
+- What is jest and react testing library
 
-- optimization in react
+- Optimization in react
 
-- useCallback and usememo
+- Explain useCallback and usememo hook
 
-- new features of new version of react-router
+- Explain the new features of new version of react-router
 
-- give an example of object destructuring
+- Give an example of object destructuring
 
-- SyntheticEvent in react js
+- What are the Synthetic Events in react js
 
-- how to check your event in different browsers
+- How to check your event working properly in different browsers
 
-- what are redux components
+- What are the redux components
 
-- explain lazy loading in detail in react js
+- Explain lazy loading in detail in react js
 
-- what is the disadvantage of react js
+- What is the limitations of react js
