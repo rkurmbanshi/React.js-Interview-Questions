@@ -193,3 +193,7 @@
 - Explain lazy loading in detail in react js
 
 - What is the limitations of react js
+
+- What is micro front-end
+
+- What react.js/angular.js comes in picture explain in detail
