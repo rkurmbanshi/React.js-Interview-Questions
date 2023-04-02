@@ -196,4 +196,42 @@
 
 - What is micro front-end
 
-- What react.js/angular.js comes in picture explain in detail
+- Why we need react js explain in detail
+
+- How to set Initial value in redux
+
+- What is SVG in html
+
+- What is charset in html
+
+- What is drag and drop api in html5
+
+- What is canvas in html5
+
+- What is the difference between 2nd and 3rd line for bellow code snippet in react js
+
+  line 1: let [state, setState] = useState('rohit');
+  line 2: setState('rohit patel');
+  line 3: state = 'rohit patel';
+  
+- Create todo app and impliment these functionality (Add todo, complete todo, edit todo, delete todo)
+
+- Create a counter app and impliment these functionality (Start counter, pause counter, reset counter]
+
+- What is selectors in css
+
+- What is Sass in css
+
+- Explain Features of react js
+
+- Explain Disadvantages of react js
+
+- How to handle pagination and list scrolling in react js If the quantity of data is more then [Explain react window and react virtualization]
+
+- What is farward ref in react js
+
+- Explain setState is synchronous or asynchronous in useState Hook
+  const [state, setState] = useState("");
+
+- Create custom hook for the API call
+
