@@ -208,10 +208,10 @@
 
 - What is canvas in html5
 
-- What is the difference between 2nd and 3rd line for bellow code snippet in react js
+- What is the difference between 2nd and 3rd line for bellow code snippet in react js<br/>
 
-  line 1: let [state, setState] = useState('rohit');
-  line 2: setState('rohit patel');
+  line 1: let [state, setState] = useState('rohit');<br/>
+  line 2: setState('rohit patel');<br/>
   line 3: state = 'rohit patel';
   
 - Create todo app and impliment these functionality (Add todo, complete todo, edit todo, delete todo)
@@ -230,7 +230,7 @@
 
 - What is farward ref in react js
 
-- Explain setState is synchronous or asynchronous in useState Hook
+- Explain setState is synchronous or asynchronous in useState Hook<br/>
   const [state, setState] = useState("");
 
 - Create custom hook for the API call
