@@ -235,3 +235,7 @@
 
 - Create custom hook for the API call
 
+- What is accessibility
+
+- What is position in CSS
+
