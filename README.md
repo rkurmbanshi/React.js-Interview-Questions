@@ -67,8 +67,9 @@ That's it! With just a few simple steps, you've created a custom hook that can b
 
 <details>
   <summary><strong>How to react update DOM!</strong></summary>
-  
-  [Screenshot_1](https://user-images.githubusercontent.com/24729773/230078398-ab75d508-4754-4a5e-8248-a889290d5f9a.png)
+  <p align="center">
+  <img src="[your_relative_path_here](https://user-images.githubusercontent.com/24729773/230078398-ab75d508-4754-4a5e-8248-a889290d5f9a.png)" width="350" title="hover text">
+</p>
 </details>
 
 - What is VDOM
