@@ -65,7 +65,11 @@ That's it! With just a few simple steps, you've created a custom hook that can b
 
 </details>
 
-- How to react update dome
+<details>
+  <summary><strong>How to react update DOM!</strong></summary>
+  
+  [Screenshot_1](https://user-images.githubusercontent.com/24729773/230078398-ab75d508-4754-4a5e-8248-a889290d5f9a.png)
+</details>
 
 - What is VDOM
 
