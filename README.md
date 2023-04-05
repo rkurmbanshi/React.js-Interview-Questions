@@ -36,6 +36,9 @@ Finally, export the custom hook so that it can be used in other components. You 
  export default useInput;
   ```
   
+  Step 4: Use the custom hook in your components
+Now that you've created your custom hook, you can use it in your components just like you would use any other hook:
+  
   ```js
   import useInput from './useInput';
 
