@@ -67,9 +67,40 @@ That's it! With just a few simple steps, you've created a custom hook that can b
 
 <details>
   <summary><strong>How to react update DOM!</strong></summary>
-  <p align="center">
-  <img src="[your_relative_path_here](https://user-images.githubusercontent.com/24729773/230078398-ab75d508-4754-4a5e-8248-a889290d5f9a.png)" width="350" title="hover text">
-</p>
+  
+  React updates the DOM (Document Object Model) through a process called reconciliation. When a component's state or props change, React will re-render the component and compare the new output with the old output. If there are differences, React will update the DOM accordingly. Here are the steps that React takes to update the DOM:
+
+1. React updates the component's state or props.
+2. React re-renders the component and generates a new virtual DOM tree.
+3. React compares the new virtual DOM tree with the previous one to determine the differences (known as "diffing").
+4. React generates a minimal set of DOM operations to update only the parts of the DOM that have changed.
+5. React applies the DOM updates to the actual browser DOM.
+  
+Here's an example to illustrate how React updates the DOM:
+  ```js
+  import React, { useState } from 'react';
+
+function Counter() {
+  const [count, setCount] = useState(0);
+
+  function handleClick() {
+    setCount(count + 1);
+  }
+
+  return (
+    <div>
+      <p>Count: {count}</p>
+      <button onClick={handleClick}>Increment</button>
+    </div>
+  );
+}
+
+  ```
+  
+  In this example, we have a simple Counter component that displays a count and a button that increments the count when clicked. When the button is clicked, React updates the count state and re-renders the component. React then generates a new virtual DOM tree and compares it with the previous one. In this case, the only difference is the updated count value. React generates a DOM update to change the text content of the p element to the new count value. Finally, React applies the DOM update to the browser DOM, and the count is updated on the screen.
+
+Overall, React's process for updating the DOM is optimized for performance and efficiency, allowing for fast and responsive user interfaces.
+  
 </details>
 
 - What is VDOM
