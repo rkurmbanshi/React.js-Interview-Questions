@@ -1,6 +1,66 @@
 # React.js-Interview-Questions
 
-- How to create custom hooks
+<details>
+  <summary>How to create custom hooks</summary>
+  
+  React Hooks are a powerful feature in React that allow developers to use state and other React features in functional components. Creating custom hooks can help you  extract reusable logic from your components, making them more maintainable and easier to understand. Here's a step-by-step guide on how to create custom hooks in React:
+
+Step 1: Identify the reusable logic
+First, identify the logic that you want to extract from your component. It could be anything from managing state to handling API calls.
+
+Step 2: Create a function that uses the useState or useEffect hooks
+Next, create a function that uses the useState or useEffect hooks, depending on what your custom hook needs to do. You can also use other built-in hooks like useContext or useReducer if needed.
+
+For example, if you want to create a custom hook that manages the state of a form input, you can create a function like this:
+
+  ```js
+  import { useState } from 'react';
+
+  function useInput(initialValue) {
+    const [value, setValue] = useState(initialValue);
+
+    function handleChange(event) {
+      setValue(event.target.value);
+    }
+
+    return [value, handleChange];
+  }
+
+  ```
+  This hook uses the useState hook to manage the state of the input value and returns an array with the current value and a handleChange function that updates the value.
+
+Step 3: Export the custom hook
+Finally, export the custom hook so that it can be used in other components. You can name the custom hook whatever you like, as long as it starts with the prefix "use" to indicate that it's a hook.
+
+```js
+ export default useInput;
+  ```
+  
+  ```js
+  import useInput from './useInput';
+
+function MyForm() {
+  const [name, setName] = useInput('');
+
+  function handleSubmit(event) {
+    event.preventDefault();
+    console.log(name);
+  }
+
+  return (
+    <form onSubmit={handleSubmit}>
+      <input type="text" value={name} onChange={setName} />
+      <button type="submit">Submit</button>
+    </form>
+  );
+}
+  ```
+  
+  In this example, the useInput hook is used to manage the state of the input value in a form.
+
+That's it! With just a few simple steps, you've created a custom hook that can be reused in any number of components.
+
+</details>
 
 - How to react update dome
 
