@@ -1,7 +1,7 @@
 # React.js-Interview-Questions
 
 <details>
-  <summary><strong>How to create custom hooks<strong></summary>
+  <summary><strong>How to create custom hooks</strong></summary>
   
   React Hooks are a powerful feature in React that allow developers to use state and other React features in functional components. Creating custom hooks can help you  extract reusable logic from your components, making them more maintainable and easier to understand. Here's a step-by-step guide on how to create custom hooks in React:
 
