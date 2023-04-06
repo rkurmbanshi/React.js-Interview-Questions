@@ -442,5 +442,6 @@ To avoid prop drilling, we can use ReactJS's Context API or state management lib
 
 - Difference between normal export and default export
 
-![Screenshot_1](https://user-images.githubusercontent.com/24729773/230261043-a5e3bc3b-3f5c-4351-bf95-df7aef6ef574.png)
-<img src="![Screenshot_1](https://user-images.githubusercontent.com/24729773/230261043-a5e3bc3b-3f5c-4351-bf95-df7aef6ef574.png)" />
+
+<img src="![screencapture-file-C-Users-Rohit-Desktop-Load-filtered-list-with-API-html-2023-04-06-08_38_43](https://user-images.githubusercontent.com/24729773/230262738-0db15f63-c5eb-443b-8384-b349a677f8e4.png)
+" />
