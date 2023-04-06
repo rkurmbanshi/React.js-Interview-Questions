@@ -103,11 +103,109 @@ Overall, React's process for updating the DOM is optimized for performance and e
   
 </details>
 
-- What is VDOM
+<details>
+  <summary><strong>What is VDOM in react js</strong></summary>
 
-- State management is react
+  In a traditional web application, the browser maintains a Document Object Model (DOM) which is a tree-like structure that represents the HTML elements in the web page. Whenever the state of the application changes, the browser needs to update the DOM to reflect those changes. This process of updating the DOM can be slow and resource-intensive, especially when there are a lot of changes.
 
-- What is Prop drilling
+ReactJS solves this problem by introducing the concept of a Virtual DOM. The Virtual DOM is a lightweight representation of the actual DOM. When the state of the application changes, ReactJS creates a new Virtual DOM tree and compares it with the previous Virtual DOM tree to identify the minimal number of changes needed to update the actual DOM. This process of comparing the Virtual DOM trees and updating the actual DOM is called reconciliation.
+
+The Virtual DOM in ReactJS is an abstraction that allows ReactJS to optimize the updating process, resulting in a faster and more efficient application. By minimizing the number of changes required to update the DOM, ReactJS reduces the amount of work the browser needs to do, which leads to better performance and a smoother user experience.
+
+In summary, the Virtual DOM is a key concept in ReactJS that allows for efficient and optimized updating of the actual DOM, resulting in better performance and a smoother user experience.
+</details>
+
+<details>
+  <summary><strong>State management is react</strong></summary>
+
+  In ReactJS, functional components can also manage state using the useState hook. The useState hook is a built-in hook that allows us to add state to functional components without the need to convert them to class components.
+
+  Here's an example of how to use the useState hook to manage state in a functional component:
+  
+  ```js 
+  import React, { useState } from 'react';
+
+const Counter = () => {
+  const [count, setCount] = useState(0);
+
+  const increment = () => {
+    setCount(count + 1);
+  };
+
+  return (
+    <div>
+      <p>Count: {count}</p>
+      <button onClick={increment}>Increment</button>
+    </div>
+  );
+};
+```
+
+In the example above, we use the useState hook to define the initial state of the count variable to be 0. The useState hook returns an array with two elements: the current state value and a function to update the state. We use array destructuring to assign these values to count and setCount respectively.
+
+To update the state, we call the setCount function with the new value of count. When the state changes, ReactJS will automatically re-render the component and its children.
+
+Functional components can also use state management libraries like Redux and MobX in a similar way as class components. The only difference is that we use the useSelector and useDispatch hooks to access the state and dispatch actions respectively.
+
+Overall, state management in functional components is very similar to class components and can be achieved using the useState hook or state management libraries.
+</details>
+
+<details>
+  <summary><strong>What is Prop drilling</strong></summary>
+
+  Prop drilling is a term used in ReactJS to describe the process of passing props from a parent component down to a child component, and then down to another child component, and so on, until the prop reaches the component that needs it.
+
+Prop drilling can occur when a parent component needs to pass data to a deeply nested child component. To do this, the parent component must pass the data down through each intermediate component in the hierarchy, even if those intermediate components do not need the data.
+
+Here's an example of how prop drilling can occur:
+
+```js 
+const App = () => {
+  const [data, setData] = useState([]);
+
+  const fetchData = async () => {
+    // fetch data and update state
+  };
+
+  return (
+    <div>
+      <Header />
+      <Main data={data} />
+      <Footer />
+    </div>
+  );
+};
+
+const Main = ({ data }) => {
+  return (
+    <div>
+      <Sidebar />
+      <Content data={data} />
+    </div>
+  );
+};
+
+const Content = ({ data }) => {
+  return (
+    <div>
+      {data.map((item) => (
+        <Item key={item.id} item={item} />
+      ))}
+    </div>
+  );
+};
+
+const Item = ({ item }) => {
+  return <div>{item.name}</div>;
+};
+
+```
+In the example above, the App component fetches data and passes it down to the Main component via the data prop. The Main component then passes the data prop down to the Content component, which maps over the data to render Item components.
+
+In this scenario, the data prop is being drilled down through the Main and Content components, even though they do not use the data prop themselves. This can be inefficient and make the code more difficult to maintain.
+
+To avoid prop drilling, we can use ReactJS's Context API or state management libraries like Redux and MobX to pass data down the component hierarchy without the need to pass props through intermediate components. These methods provide a more efficient and scalable solution to managing and passing state in ReactJS applications.
+</details>
 
 - What is redux
 
@@ -337,4 +435,10 @@ Overall, React's process for updating the DOM is optimized for performance and e
 - What is accessibility
 
 - What is position in CSS
+
+- What is react fiber
+
+- Explain inline element or block element
+
+- Difference between normal export and default export
 
