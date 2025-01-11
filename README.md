@@ -1020,8 +1020,7 @@ In React, form handling can be done using controlled components, where form data
 
 Example of a simple controlled form with validation:
 
-javascript
-Copy code
+```javascript
 const Form = () => {
   const [name, setName] = useState('');
   const [error, setError] = useState('');
@@ -1049,14 +1048,14 @@ const Form = () => {
     </form>
   );
 };
+```
 </details>
 <details> <summary><strong>67. What is Context API in React?</strong></summary>
 The Context API allows you to share values (like themes or authentication status) between components without having to explicitly pass props through every level of the component tree.
 
 Example:
 
-javascript
-Copy code
+```javascript
 const ThemeContext = React.createContext();
 
 const ThemeProvider = ({ children }) => {
@@ -1085,6 +1084,7 @@ const App = () => (
     <ThemedComponent />
   </ThemeProvider>
 );
+```
 </details>
 <details> <summary><strong>68. Explain Local Storage and Session Storage and How to Secure Both Storages?</strong></summary>
 LocalStorage: Stores data with no expiration date, it remains until it's explicitly deleted.
@@ -1096,8 +1096,7 @@ Use encryption if you must store sensitive data.
 Store tokens in secure HTTP-only cookies for better security.
 Example:
 
-javascript
-Copy code
+```javascript
 // Setting data in Local Storage
 localStorage.setItem('name', 'John');
 
@@ -1119,13 +1118,13 @@ worker.onmessage = (e) => {
   console.log('Received from worker:', e.data);
 };
 worker.js:
-
-javascript
-Copy code
+```
+```javascript
 onmessage = (e) => {
   console.log('Message from main thread:', e.data);
   postMessage('Task completed');
 };
+```
 </details>
 
 <details> <summary><strong>70. What is PWA (Progressive Web App)?</strong></summary>
@@ -1133,8 +1132,7 @@ A Progressive Web App (PWA) is a type of application built using standard web te
 
 Example:
 
-javascript
-Copy code
+```javascript
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('/service-worker.js')
     .then((registration) => {
@@ -1144,6 +1142,7 @@ if ('serviceWorker' in navigator) {
       console.log('Service Worker registration failed:', error);
     });
 }
+```
 </details>
 <details> <summary><strong>71. Difference Between Single Page Application and Multi-Page Application</strong></summary>
 Single Page Application (SPA): A web app that loads a single HTML page and dynamically updates as the user interacts with the app, providing a seamless experience (e.g., React).
@@ -1158,8 +1157,7 @@ API calls are made to interact with external services or databases to fetch or m
 
 Example of an API call using fetch:
 
-javascript
-Copy code
+```javascript
 useEffect(() => {
   const fetchData = async () => {
     try {
@@ -1173,35 +1171,35 @@ useEffect(() => {
 
   fetchData();
 }, []);
+```
 </details>
 <details> <summary><strong>73. What is Optimization and How to Implement it in React JS?</strong></summary>
 Optimization in React involves improving the performance of a React application by reducing unnecessary re-renders, minimizing network requests, and optimizing code execution. Some common techniques are memoization, code splitting, lazy loading, and more.
 
 Example using React.memo:
 
-javascript
-Copy code
+```javascript
 const MemoizedComponent = React.memo((props) => {
   // Only re-renders if props change
   return <div>{props.value}</div>;
 });
+```
 Lazy Loading Example:
 
-javascript
-Copy code
+```javascript
 const LazyComponent = React.lazy(() => import('./LazyComponent'));
 
 <React.Suspense fallback={<div>Loading...</div>}>
   <LazyComponent />
 </React.Suspense>
+```
 </details>
 <details> <summary><strong>74. What is AMP (Accelerated Mobile Pages)?</strong></summary>
 AMP is an open-source framework created to help web pages load faster on mobile devices by optimizing content for speed and performance. It uses a stripped-down version of HTML, CSS, and JavaScript.
 
 Example of AMP HTML:
 
-html
-Copy code
+```html
 <html ⚡>
   <head>
     <meta charset="utf-8">
@@ -1215,18 +1213,19 @@ Copy code
     <p>This is a sample AMP page.</p>
   </body>
 </html>
+```
 </details>
 <details> <summary><strong>75. What is Page Layout Shift?</strong></summary>
 Page Layout Shift refers to the unexpected shifting of web page content as the page loads, which negatively impacts user experience. This can happen if resources (like images or fonts) are loaded dynamically, causing elements to move around.
 
 Fixing Layout Shifts Example:
 
-css
-Copy code
+```css
 img {
   width: 100%;
   height: auto;
 }
+```
 </details>
 <details> <summary><strong>76. What is Microservices?</strong></summary>
 Microservices is an architectural style where an application is developed as a collection of loosely coupled services, each responsible for a specific business functionality. Each service can be developed, deployed, and scaled independently.
@@ -1239,8 +1238,7 @@ The this keyword refers to the current context in which a function is executing.
 
 Example:
 
-javascript
-Copy code
+```javascript
 const person = {
   name: 'Alice',
   greet() {
@@ -1249,14 +1247,14 @@ const person = {
 };
 
 person.greet();  // 'Alice'
+```
 </details>
 <details> <summary><strong>78. What is a Semantic Element?</strong></summary>
 Semantic elements are HTML tags that provide meaning to the content inside them, making the code more readable and accessible. These elements help search engines and developers understand the structure and importance of the content.
 
 Example of Semantic Elements:
 
-html
-Copy code
+```html
 <article>
   <header><h1>Article Title</h1></header>
   <section>
@@ -1264,14 +1262,14 @@ Copy code
   </section>
   <footer>Author: John Doe</footer>
 </article>
+```
 </details>
 <details> <summary><strong>79. What is a CSS Object?</strong></summary>
 A CSS object is an object in JavaScript that contains CSS properties and their values. You can dynamically apply styles to an element using a CSS object.
 
 Example:
 
-javascript
-Copy code
+```javascript
 const styles = {
   color: 'blue',
   backgroundColor: 'lightgray',
@@ -1279,6 +1277,7 @@ const styles = {
 };
 
 return <div style={styles}>Styled Div</div>;
+```
 </details>
 
 <details> <summary><strong>80. What is Redux?</strong></summary>
@@ -1286,8 +1285,7 @@ Redux is a predictable state container for JavaScript apps, used to manage the s
 
 Example:
 
-javascript
-Copy code
+```javascript
 const initialState = { count: 0 };
 
 function reducer(state = initialState, action) {
@@ -1302,14 +1300,14 @@ function reducer(state = initialState, action) {
 }
 
 const store = createStore(reducer);
+```
 </details>
 <details> <summary><strong>81. What is Observable in Redux?</strong></summary>
 An observable in Redux is a pattern used to represent state as a stream of events that components can subscribe to and react to. It allows components to react to changes in state or other side-effects without directly querying the state.
 
 Example: In combination with Redux-Saga or Redux-Observable, actions can be observed to trigger side effects like API calls.
 
-javascript
-Copy code
+```javascript
 import { Observable } from 'rxjs';
 
 const fetchDataObservable = new Observable((observer) => {
@@ -1318,14 +1316,14 @@ const fetchDataObservable = new Observable((observer) => {
     .then(data => observer.next(data))
     .catch(err => observer.error(err));
 });
+```
 </details>
 <details> <summary><strong>82. What is Flux?</strong></summary>
 Flux is an architecture for managing application state developed by Facebook. It emphasizes a unidirectional data flow, which makes state changes predictable and easier to trace.
 
 Example: In Flux, the state is managed by a store, and actions are dispatched to the store to change the state.
 
-javascript
-Copy code
+```javascript
 const store = {
   dispatch(action) {
     // Handle the action
@@ -1334,14 +1332,14 @@ const store = {
     // Return current state
   },
 };
+```
 </details>
 <details> <summary><strong>83. What is Higher-Order Component (HOC)?</strong></summary>
 A Higher-Order Component is a function that takes a component and returns a new component with additional functionality. It’s used for code reuse, logic abstraction, and adding features to components.
 
 Example:
 
-javascript
-Copy code
+```javascript
 const withLoading = (WrappedComponent) => {
   return (props) => {
     if (props.isLoading) {
@@ -1352,22 +1350,23 @@ const withLoading = (WrappedComponent) => {
 };
 
 const MyComponent = withLoading(MyComponent);
+```
 </details>
 <details> <summary><strong>84. Difference Between Map and Reduce</strong></summary>
 Map: It applies a function to each item in an array and returns a new array with the results.
 Reduce: It accumulates the array items into a single value by applying a function.
 Example of Map:
 
-javascript
-Copy code
+```javascript
 const numbers = [1, 2, 3];
 const squared = numbers.map(x => x * x);  // [1, 4, 9]
+```
 Example of Reduce:
 
-javascript
-Copy code
+```javascript
 const numbers = [1, 2, 3];
 const sum = numbers.reduce((acc, x) => acc + x, 0);  // 6
+```
 </details>
 <details> <summary><strong>85. What is React JS and Its Pros and Cons?</strong></summary>
 React JS is a JavaScript library for building user interfaces, primarily for single-page applications. It allows for building complex, interactive UIs through components.
@@ -1387,11 +1386,11 @@ Batching refers to the process of grouping multiple state updates into a single 
 
 Example:
 
-javascript
-Copy code
+```javascript
 setState({ count: 1 });
 setState({ count: 2 });
 // React batches these state updates and renders the component only once.
+```
 </details>
 <details> <summary><strong>87. What is Diffing and Reconciliation?</strong></summary>
 Diffing is the process React uses to compare the current and previous virtual DOM and determine the minimal set of changes needed to update the real DOM. Reconciliation is the process of applying those changes to the real DOM.
@@ -1404,27 +1403,27 @@ The useRef hook is used to persist values across renders without causing a re-re
 
 Example:
 
-javascript
-Copy code
+```javascript
 const inputRef = useRef();
 const focusInput = () => {
   inputRef.current.focus();  // Focus the input element
 };
 
 return <input ref={inputRef} />;
+```
 </details>
 <details> <summary><strong>89. What is a Pure Component?</strong></summary>
 A Pure Component is a React component that only re-renders when its props or state change. It implements a shallow comparison of props and state to optimize rendering.
 
 Example:
 
-javascript
-Copy code
+```javascript
 class PureComponentExample extends React.PureComponent {
   render() {
     return <div>{this.props.value}</div>;
   }
 }
+```
 </details>
 
 <details> <summary><strong>90. What is a Pure Function?</strong></summary>
@@ -1432,19 +1431,18 @@ A pure function is a function that always produces the same output for the same 
 
 Example:
 
-javascript
-Copy code
+```javascript
 function add(a, b) {
   return a + b;  // This is a pure function
 }
+```
 </details>
 <details> <summary><strong>91. What is `useState`?</strong></summary>
 useState is a React hook that allows you to add state to functional components. It returns a stateful value and a function to update it.
 
 Example:
 
-javascript
-Copy code
+```javascript
 const [count, setCount] = useState(0);
 
 const increment = () => {
@@ -1457,36 +1455,36 @@ return (
     <button onClick={increment}>Increment</button>
   </div>
 );
+```
 </details>
 <details> <summary><strong>92. What is `useEffect`?</strong></summary>
 useEffect is a React hook that allows you to perform side effects in functional components. It runs after the render and can be used for things like data fetching, DOM manipulation, or subscriptions.
 
 Example:
 
-javascript
-Copy code
+```javascript
 useEffect(() => {
   console.log('Component mounted or updated');
 }, [count]);  // This runs every time the `count` changes
+```
 </details>
 <details> <summary><strong>93. What is `useSelector`?</strong></summary>
 useSelector is a hook used to access the Redux store’s state in a functional component. It subscribes to the Redux store and re-renders the component whenever the selected state changes.
 
 Example:
 
-javascript
-Copy code
+```javascript
 const count = useSelector((state) => state.count);
 
 return <div>{count}</div>;
+```
 </details>
 <details> <summary><strong>94. What is `useDispatch`?</strong></summary>
 useDispatch is a hook used to dispatch actions to the Redux store from within a functional component.
 
 Example:
 
-javascript
-Copy code
+```javascript
 const dispatch = useDispatch();
 
 const increment = () => {
@@ -1494,14 +1492,14 @@ const increment = () => {
 };
 
 return <button onClick={increment}>Increment</button>;
+```
 </details>
 <details> <summary><strong>95. How to Configure a Store and Create a Slice in Redux?</strong></summary>
 To configure a store and create a slice, you need to use Redux Toolkit’s configureStore and createSlice functions.
 
 Example:
 
-javascript
-Copy code
+```javascript
 import { configureStore, createSlice } from '@reduxjs/toolkit';
 
 const counterSlice = createSlice({
@@ -1518,24 +1516,24 @@ const store = configureStore({
 });
 
 export const { increment, decrement } = counterSlice.actions;
+```
 </details>
 <details> <summary><strong>96. What are Actions in Redux?</strong></summary>
 Actions in Redux are plain JavaScript objects that describe an event or action that occurred in the application. Each action must have a type field to indicate what happened.
 
 Example:
 
-javascript
-Copy code
+```javascript
 const incrementAction = { type: 'INCREMENT' };
 const decrementAction = { type: 'DECREMENT' };
+```
 </details>
 <details> <summary><strong>97. What is Redux Saga?</strong></summary>
 Redux Saga is a middleware library used for handling side effects in Redux applications. It uses generator functions to manage asynchronous actions like data fetching.
 
 Example:
 
-javascript
-Copy code
+```javascript
 import { takeEvery, put } from 'redux-saga/effects';
 
 function* incrementAsync() {
@@ -1546,16 +1544,17 @@ function* incrementAsync() {
 function* watchIncrementAsync() {
   yield takeEvery('INCREMENT_ASYNC', incrementAsync);
 }
+```
 </details>
 <details> <summary><strong>98. What is Shadow DOM?</strong></summary>
 The Shadow DOM is a web standard that allows developers to encapsulate a part of a DOM tree in a way that it is hidden from the main document. This helps in creating reusable components without worrying about CSS or JavaScript conflicts.
 
 Example:
 
-javascript
-Copy code
+```javascript
 const shadowRoot = document.getElementById('shadow-host').attachShadow({ mode: 'open' });
 shadowRoot.innerHTML = '<p>This is inside the shadow DOM!</p>';
+```
 </details>
 <details> <summary><strong>99. Class vs Functional Components</strong></summary>
 Class Components: They are ES6 classes that can hold state and lifecycle methods.
@@ -1564,8 +1563,7 @@ Example:
 
 Class Component:
 
-javascript
-Copy code
+```javascript
 class MyComponent extends React.Component {
   constructor(props) {
     super(props);
@@ -1576,14 +1574,15 @@ class MyComponent extends React.Component {
     return <div>{this.state.count}</div>;
   }
 }
+```
 Functional Component:
 
-javascript
-Copy code
+```javascript
 const MyComponent = () => {
   const [count, setCount] = useState(0);
   return <div>{count}</div>;
 };
+```
 </details>
 
 <details> <summary><strong>100. What is the Lifecycle in a Class Component?</strong></summary>
@@ -1591,8 +1590,7 @@ In a class component, the lifecycle consists of several phases: mounting, updati
 
 Example:
 
-javascript
-Copy code
+```javascript
 class MyComponent extends React.Component {
   componentDidMount() {
     console.log('Component Mounted');
@@ -1610,14 +1608,14 @@ class MyComponent extends React.Component {
     return <div>Lifecycle Example</div>;
   }
 }
+```
 </details>
 <details> <summary><strong>101. What is the `componentShouldUpdate` Lifecycle Method?</strong></summary>
 componentShouldUpdate is a lifecycle method that is called before the render method. It allows you to optimize performance by preventing unnecessary re-renders.
 
 Example:
 
-javascript
-Copy code
+```javascript
 class MyComponent extends React.Component {
   shouldComponentUpdate(nextProps, nextState) {
     if (nextState.count !== this.state.count) {
@@ -1630,14 +1628,14 @@ class MyComponent extends React.Component {
     return <div>{this.state.count}</div>;
   }
 }
+```
 </details>
 <details> <summary><strong>102. State vs Props</strong></summary>
 State: Data that is managed within a component and can be updated.
 Props: Data passed to a component from a parent component, which cannot be directly modified by the child.
 Example:
 
-javascript
-Copy code
+```javascript
 const ParentComponent = () => {
   const parentData = 'Hello';
   return <ChildComponent message={parentData} />;
@@ -1646,14 +1644,14 @@ const ParentComponent = () => {
 const ChildComponent = (props) => {
   return <div>{props.message}</div>;
 };
+```
 </details>
 <details> <summary><strong>103. How to Pass Data from Child to Parent Component?</strong></summary>
 Data can be passed from a child component to a parent component via a callback function provided as a prop.
 
 Example:
 
-javascript
-Copy code
+```javascript
 const ParentComponent = () => {
   const handleData = (data) => {
     console.log(data);
@@ -1665,6 +1663,7 @@ const ParentComponent = () => {
 const ChildComponent = (props) => {
   return <button onClick={() => props.sendData('Data from child')}>Send Data</button>;
 };
+```
 </details>
 <details> <summary><strong>104. What are Controlled and Uncontrolled Components?</strong></summary>
 Controlled Components: Components that are controlled by React state, where the input value is managed via useState or this.setState.
@@ -1672,15 +1671,14 @@ Uncontrolled Components: Components where the form data is handled by the DOM ra
 Example:
 
 Controlled Component:
-javascript
-Copy code
+```javascript
 const [value, setValue] = useState('');
 const handleChange = (e) => setValue(e.target.value);
 
 return <input type="text" value={value} onChange={handleChange} />;
+```
 Uncontrolled Component:
-javascript
-Copy code
+```javascript
 const inputRef = useRef(null);
 
 const handleSubmit = () => {
@@ -1688,6 +1686,7 @@ const handleSubmit = () => {
 };
 
 return <input ref={inputRef} type="text" />;
+```
 </details>
 <details> <summary><strong>105. What is Stateless and Stateful Component?</strong></summary>
 Stateless Components: Components that do not have any state and only render UI based on props.
@@ -1695,14 +1694,13 @@ Stateful Components: Components that have state and manage it within themselves.
 Example:
 
 Stateless Component:
-javascript
-Copy code
+```javascript
 const StatelessComponent = (props) => {
   return <div>{props.text}</div>;
 };
+```
 Stateful Component:
-javascript
-Copy code
+```javascript
 class StatefulComponent extends React.Component {
   constructor(props) {
     super(props);
@@ -1713,14 +1711,14 @@ class StatefulComponent extends React.Component {
     return <div>{this.state.count}</div>;
   }
 }
+```
 </details>
 <details> <summary><strong>106. What is Prop Drilling?</strong></summary>
 Prop drilling refers to the process of passing data from a parent component to a deeply nested child component via multiple layers of intermediate components.
 
 Example:
 
-javascript
-Copy code
+```javascript
 const GrandparentComponent = () => {
   const message = 'Hello from Grandparent';
   return <ParentComponent message={message} />;
@@ -1733,14 +1731,14 @@ const ParentComponent = ({ message }) => {
 const ChildComponent = ({ message }) => {
   return <div>{message}</div>;
 };
+```
 </details>
 <details> <summary><strong>107. How to Manage API Calls in React JS?</strong></summary>
 API calls in React can be managed using hooks like useEffect to make calls when the component mounts, along with useState to store the fetched data.
 
 Example:
 
-javascript
-Copy code
+```javascript
 const [data, setData] = useState(null);
 
 useEffect(() => {
@@ -1750,14 +1748,14 @@ useEffect(() => {
 }, []);
 
 return <div>{data ? JSON.stringify(data) : 'Loading...'}</div>;
+```
 </details>
 <details> <summary><strong>108. Which Lifecycle Method Performs an API Call?</strong></summary>
 In class components, componentDidMount is commonly used for API calls after the component has mounted. In functional components, useEffect serves a similar purpose.
 
 Example (Class Component):
 
-javascript
-Copy code
+```javascript
 class MyComponent extends React.Component {
   componentDidMount() {
     fetch('https://api.example.com/data')
@@ -1769,15 +1767,16 @@ class MyComponent extends React.Component {
     return <div>API Call in componentDidMount</div>;
   }
 }
+```
 Example (Functional Component):
 
-javascript
-Copy code
+```javascript
 useEffect(() => {
   fetch('https://api.example.com/data')
     .then((response) => response.json())
     .then((data) => console.log(data));
 }, []);
+```
 </details>
 
 <details> <summary><strong>109. What is Box-Sizing in CSS?</strong></summary>
@@ -1787,22 +1786,21 @@ content-box: The width and height only include the content.
 border-box: The width and height include the padding and border.
 Example:
 
-css
-Copy code
+```css
 .box {
   box-sizing: border-box;
   width: 100px;
   padding: 10px;
   border: 5px solid black;
 }
+```
 </details>
 <details> <summary><strong>110. Absolute vs Relative in CSS?</strong></summary>
 Absolute: The element is positioned relative to its nearest positioned ancestor or the initial containing block.
 Relative: The element is positioned relative to its normal position in the document flow.
 Example:
 
-css
-Copy code
+```css
 .absolute {
   position: absolute;
   top: 20px;
@@ -1814,14 +1812,14 @@ Copy code
   top: 10px;
   left: 30px;
 }
+```
 </details>
 <details> <summary><strong>111. What is Pseudo-Class?</strong></summary>
 A pseudo-class is used to define the special state of an element, such as when it's hovered over, focused, or selected.
 
 Example:
 
-css
-Copy code
+```css
 a:hover {
   color: red;
 }
@@ -1829,23 +1827,24 @@ a:hover {
 input:focus {
   border-color: blue;
 }
+```
 </details>
 <details> <summary><strong>112. What is Modules CSS?</strong></summary>
 CSS Modules are a way to scope CSS styles to the component. This prevents style conflicts by generating unique class names for each class.
 
 Example:
 
-css
-Copy code
+```css
 /* styles.module.css */
 .button {
   background-color: blue;
 }
-javascript
-Copy code
+```
+```javascript
 import styles from './styles.module.css';
 
 const Button = () => <button className={styles.button}>Click me</button>;
+```
 </details>
 <details> <summary><strong>113. Difference Between Reset vs Normalized CSS?</strong></summary>
 Reset CSS: Resets all browser default styles to a consistent baseline.
@@ -1853,20 +1852,21 @@ Normalize CSS: Preserves useful default styles but fixes common bugs across brow
 Example:
 
 Reset CSS:
-css
-Copy code
+```css
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+```
 Normalize CSS:
-css
-Copy code
+
+```css
 /* Normalize styles to make them consistent across browsers */
 html {
   font-family: sans-serif;
 }
+```
 </details>
 <details> <summary><strong>114. What Are Pseudo-Elements and Pseudo-Classes?</strong></summary>
 Pseudo-elements: Target parts of an element (e.g., ::before, ::after).
@@ -1874,26 +1874,25 @@ Pseudo-classes: Target an element's special state (e.g., :hover, :focus).
 Example:
 
 Pseudo-element:
-css
-Copy code
+```javascript
 p::before {
   content: "Note: ";
   font-weight: bold;
 }
+```
 Pseudo-class:
-css
-Copy code
+```csss
 button:hover {
   background-color: blue;
 }
+```
 </details>
 <details> <summary><strong>115. How to Call Multiple APIs at One Time?</strong></summary>
 You can call multiple APIs simultaneously using Promise.all or Promise.allSettled.
 
 Example:
 
-javascript
-Copy code
+```javascript
 Promise.all([fetch('api1'), fetch('api2')])
   .then(([response1, response2]) => {
     return Promise.all([response1.json(), response2.json()]);
@@ -1901,14 +1900,14 @@ Promise.all([fetch('api1'), fetch('api2')])
   .then(([data1, data2]) => {
     console.log(data1, data2);
   });
+```
 </details>
 <details> <summary><strong>116. What is Redux?</strong></summary>
 Redux is a state management library for JavaScript apps. It helps to manage the state of an entire application using a single store.
 
 Example:
 
-javascript
-Copy code
+```javascript
 const initialState = { count: 0 };
 
 function counterReducer(state = initialState, action) {
@@ -1919,14 +1918,14 @@ function counterReducer(state = initialState, action) {
       return state;
   }
 }
+```
 </details>
 <details> <summary><strong>117. What is Context API?</strong></summary>
 The React Context API provides a way to pass data through the component tree without manually passing props down at every level.
 
 Example:
 
-javascript
-Copy code
+```javascript
 const MyContext = React.createContext();
 
 const Parent = () => {
@@ -1941,14 +1940,14 @@ const Child = () => {
   const contextValue = useContext(MyContext);
   return <div>{contextValue}</div>;
 };
+```
 </details>
 <details> <summary><strong>118. What is Prop Drilling?</strong></summary>
 Prop drilling refers to the process of passing data from a parent component down to a deeply nested child component through multiple intermediate components.
 
 Example:
 
-javascript
-Copy code
+```javascript
 const ParentComponent = () => {
   const data = 'Hello World';
   return <ChildComponent data={data} />;
@@ -1957,6 +1956,7 @@ const ParentComponent = () => {
 const ChildComponent = ({ data }) => {
   return <div>{data}</div>;
 };
+```
 </details>
 
 <details> <summary><strong>119. What is Styled Component?</strong></summary>
@@ -1964,8 +1964,7 @@ Styled-components is a library for styling React components using tagged templat
 
 Example:
 
-javascript
-Copy code
+```javascript
 import styled from 'styled-components';
 
 const Button = styled.button`
@@ -1975,14 +1974,14 @@ const Button = styled.button`
 `;
 
 const App = () => <Button>Click Me</Button>;
+```
 </details>
 <details> <summary><strong>120. What is Doctype in HTML?</strong></summary>
 <!DOCTYPE> declaration defines the document type and version of HTML being used. It must be placed at the very beginning of the HTML document.
 
 Example:
 
-html
-Copy code
+```html
 <!DOCTYPE html>
 <html>
   <head>
@@ -1992,36 +1991,36 @@ Copy code
     <p>Hello, world!</p>
   </body>
 </html>
+```
 </details>
 <details> <summary><strong>121. What Are Meta Tags?</strong></summary>
 Meta tags provide metadata about the HTML document, like the character set, author, description, or keywords. These tags are placed inside the <head> element.
 
 Example:
 
-html
-Copy code
+```html
 <meta charset="UTF-8">
 <meta name="description" content="Learn web development">
+```
 </details>
 <details> <summary><strong>122. What Are Semantic Elements?</strong></summary>
 Semantic elements clearly describe their meaning in a human- and machine-readable way. Examples include <article>, <section>, <header>, and <footer>.
 
 Example:
 
-html
-Copy code
+```html
 <article>
   <h2>Article Title</h2>
   <p>Article content...</p>
 </article>
+```
 </details>
 <details> <summary><strong>123. What Are Styled-Components?</strong></summary>
 Styled-components allow you to define component-level styles with a clean, JavaScript-based syntax. It enables automatic CSS scoping for each component.
 
 Example:
 
-javascript
-Copy code
+```javascript
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
@@ -2035,81 +2034,81 @@ const App = () => (
     <h1>Welcome to Styled Components!</h1>
   </Wrapper>
 );
+```
 </details>
 <details> <summary><strong>124. What is Sass?</strong></summary>
 Sass (Syntactically Awesome Stylesheets) is a CSS preprocessor that adds features like variables, nested rules, and mixins to make CSS more maintainable.
 
 Example:
 
-scss
-Copy code
+```scss
 $primary-color: #3498db;
 
 .button {
   background-color: $primary-color;
   color: white;
 }
+```
 </details>
 <details> <summary><strong>125. What is Module CSS?</strong></summary>
 CSS Modules are a way to scope styles locally to the component they belong to, avoiding global style conflicts.
 
 Example:
 
-css
-Copy code
+```css
 /* button.module.css */
 .button {
   background-color: green;
 }
-javascript
-Copy code
+```
+```javascript
 import styles from './button.module.css';
 
 const Button = () => <button className={styles.button}>Click Me</button>;
+```
 </details>
 <details> <summary><strong>126. How to Optimize Your Component?</strong></summary>
 You can optimize components in React by using techniques such as memoization, lazy loading, avoiding unnecessary re-renders, and splitting the code.
 
 Example:
 
-javascript
-Copy code
+```javascript
 import React, { memo } from 'react';
 
 const ExpensiveComponent = memo(() => {
   // This component will only re-render if props change
   return <div>Expensive Component</div>;
 });
+```
 </details>
 <details> <summary><strong>127. What is UseState?</strong></summary>
 useState is a hook used to add state to functional components. It returns an array with two elements: the current state and a function to update it.
 
 Example:
 
-javascript
-Copy code
+```javascript
 const [count, setCount] = useState(0);
 
 const increment = () => setCount(count + 1);
+```
 </details>
 <details> <summary><strong>128. What is UseEffect?</strong></summary>
 useEffect is a hook that allows you to perform side effects in functional components, such as fetching data, subscribing to events, or manually changing the DOM.
 
 Example:
 
-javascript
-Copy code
+```javascript
 useEffect(() => {
   fetchData();
 }, []); // Runs once after the component mounts
+```
 </details>
 <details> <summary><strong>129. What Are Class Components?</strong></summary>
 Class components are the traditional way of defining components in React. They extend from React.Component and can hold state and lifecycle methods.
 
 Example:
 
-javascript
-Copy code
+```javascript
 class MyComponent extends React.Component {
   state = { count: 0 };
 
@@ -2117,19 +2116,20 @@ class MyComponent extends React.Component {
     return <div>{this.state.count}</div>;
   }
 }
+```
 </details>
 <details> <summary><strong>130. What is ComponentShouldUpdate?</strong></summary>
 componentShouldUpdate is a lifecycle method in class components that determines whether the component should re-render or not. It is used for performance optimization.
 
 Example:
 
-javascript
-Copy code
+```javascript
 class MyComponent extends React.Component {
   shouldComponentUpdate(nextProps, nextState) {
     return nextState.count !== this.state.count;
   }
 }
+```
 </details>
 
 <details> <summary><strong>131. Difference Between Functional and Class Components</strong></summary>
@@ -2138,39 +2138,38 @@ Functional Components: Simpler, use functions to define components, and can now 
 Example:
 
 Class Component:
-javascript
-Copy code
+```javascript
 class MyClassComponent extends React.Component {
   render() {
     return <div>Hello, Class Component!</div>;
   }
 }
+```
 Functional Component:
-javascript
-Copy code
+```javascript
 const MyFunctionalComponent = () => <div>Hello, Functional Component!</div>;
+```
 </details>
 <details> <summary><strong>132. What Are State and Props?</strong></summary>
 State: Represents data that can change over time and is managed within the component.
 Props: Short for properties, are used to pass data from a parent component to a child component.
 Example:
 
-javascript
-Copy code
+```javascript
 // State example
 const [count, setCount] = useState(0);
 
 // Props example
 const Parent = () => <Child name="John" />;
 const Child = (props) => <div>Hello {props.name}</div>;
+```
 </details>
 <details> <summary><strong>133. What is Prop Drilling?</strong></summary>
 Prop drilling is the process of passing data from a parent component to deeply nested child components through props.
 
 Example:
 
-javascript
-Copy code
+```javascript
 const Parent = () => {
   const data = "Hello!";
   return <Child data={data} />;
@@ -2179,14 +2178,14 @@ const Parent = () => {
 const Child = ({ data }) => <GrandChild data={data} />;
 
 const GrandChild = ({ data }) => <div>{data}</div>;
+```
 </details>
 <details> <summary><strong>134. How to Pass Data from Child to Parent Component?</strong></summary>
 Data can be passed from a child to a parent component using callback functions passed as props.
 
 Example:
 
-javascript
-Copy code
+```javascript
 const Parent = () => {
   const handleData = (data) => {
     console.log(data);
@@ -2199,14 +2198,14 @@ const Child = ({ onData }) => {
   onData("Hello from Child!");
   return <div>Child Component</div>;
 };
+```
 </details>
 <details> <summary><strong>135. What is Context API?</strong></summary>
 The Context API is a way to share values between components without having to explicitly pass props through every level of the tree.
 
 Example:
 
-javascript
-Copy code
+```javascript
 const MyContext = React.createContext();
 
 const Parent = () => (
@@ -2219,6 +2218,7 @@ const Child = () => {
   const value = useContext(MyContext);
   return <div>{value}</div>;
 };
+```
 </details>
 <details> <summary><strong>136. What Do You Prefer, Redux or Context API, and Why?</strong></summary>
 Redux is often preferred for complex state management needs, where the application involves intricate state flows and asynchronous actions. Context API is more suitable for smaller applications or to pass data without needing a full state management solution.
@@ -2229,20 +2229,19 @@ Action creators are functions that return action objects. They help in creating 
 
 Example:
 
-javascript
-Copy code
+```javascript
 const addItem = (item) => ({
   type: 'ADD_ITEM',
   payload: item
 });
+```
 </details>
 <details> <summary><strong>138. What is Saga?</strong></summary>
 Redux-Saga is a middleware for managing side effects in Redux. It listens to actions dispatched to the store and runs the necessary logic asynchronously.
 
 Example:
 
-javascript
-Copy code
+```javascript
 import { takeEvery, call, put } from 'redux-saga/effects';
 
 function* fetchData() {
@@ -2253,27 +2252,27 @@ function* fetchData() {
 export default function* rootSaga() {
   yield takeEvery('FETCH_DATA', fetchData);
 }
+```
 </details>
 <details> <summary><strong>139. How to Call API with Saga?</strong></summary>
 To call an API with Saga, use call to execute the API request and put to dispatch the result.
 
 Example:
 
-javascript
-Copy code
+```javascript
 function* fetchData() {
   const response = yield call(fetch, 'https://api.example.com/data');
   const data = yield response.json();
   yield put({ type: 'DATA_FETCHED', payload: data });
 }
+```
 </details>
 <details> <summary><strong>140. How to Auto-Call API by Redux and Saga?</strong></summary>
 You can automatically trigger an API call using Redux-Saga by dispatching an action and setting up a watcher function with takeEvery or takeLatest.
 
 Example:
 
-javascript
-Copy code
+```javascript
 function* fetchDataOnMount() {
   yield put({ type: 'FETCH_DATA' });
 }
@@ -2281,14 +2280,14 @@ function* fetchDataOnMount() {
 function* rootSaga() {
   yield takeEvery('FETCH_DATA', fetchData);
 }
+```
 </details>
 <details> <summary><strong>141. What is Jest and React Testing Library?</strong></summary>
 Jest: A JavaScript testing framework for running unit tests.
 React Testing Library: A set of utilities to test React components in a way that mimics how the app will be used by end-users.
 Example:
 
-javascript
-Copy code
+```javascript
 import { render, screen } from '@testing-library/react';
 import MyComponent from './MyComponent';
 
@@ -2296,6 +2295,7 @@ test('displays text', () => {
   render(<MyComponent />);
   expect(screen.getByText('Hello World')).toBeInTheDocument();
 });
+```
 </details>
 
 <details> <summary><strong>142. Optimization in React</strong></summary>
@@ -2308,27 +2308,27 @@ Lazy Loading: Using React.lazy and Suspense to load components only when needed.
 Use of Pure Components: Avoiding re-renders by making components pure.
 Example:
 
-javascript
-Copy code
+```javascript
 const MyComponent = React.memo(({ data }) => {
   return <div>{data}</div>;
 });
+```
 </details>
 <details> <summary><strong>143. Explain useCallback and useMemo Hooks</strong></summary>
 useCallback: Returns a memoized version of a function that only changes if one of the dependencies changes. It's useful for passing callbacks to child components without causing unnecessary re-renders.
 Example:
 
-javascript
-Copy code
+```javascript
 const memoizedCallback = useCallback(() => {
   // Function logic
 }, [dependencies]);
+```
 useMemo: Memoizes a value and only recalculates it when one of the dependencies changes.
 Example:
 
-javascript
-Copy code
+```javascript
 const memoizedValue = useMemo(() => computeExpensiveValue(a, b), [a, b]);
+```
 </details>
 <details> <summary><strong>144. Explain the New Features of React-Router</strong></summary>
 React Router v6 introduced several new features, including:
@@ -2339,8 +2339,7 @@ Relative Linking: Supports relative paths for navigation.
 useNavigate: A hook for programmatic navigation.
 Example:
 
-javascript
-Copy code
+```javascript
 import { Routes, Route } from 'react-router-dom';
 
 const App = () => (
@@ -2349,32 +2348,33 @@ const App = () => (
     <Route path="/about" element={<About />} />
   </Routes>
 );
+```
 </details>
 <details> <summary><strong>145. Give an Example of Object Destructuring</strong></summary>
 Object destructuring is a JavaScript feature that allows extracting values from objects into variables.
 
 Example:
 
-javascript
-Copy code
+```javascript
 const user = { name: 'John', age: 30 };
 const { name, age } = user;
 console.log(name); // John
 console.log(age);  // 30
+```
 </details>
 <details> <summary><strong>146. What Are Synthetic Events in React JS?</strong></summary>
 Synthetic events are React's normalized events, which are wrapped around the browser's native events. They provide consistent behavior across different browsers.
 
 Example:
 
-javascript
-Copy code
+```javascript
 const handleClick = (event) => {
   event.preventDefault();
   console.log('Button clicked');
 };
 
 return <button onClick={handleClick}>Click Me</button>;
+```
 </details>
 <details> <summary><strong>147. How to Check Your Event Working Properly in Different Browsers?</strong></summary>
 To ensure compatibility across browsers, use tools like:
@@ -2393,8 +2393,7 @@ Dispatch: Sends actions to the store.
 Selectors: Functions to access specific pieces of state.
 Example:
 
-javascript
-Copy code
+```javascript
 const rootReducer = (state = initialState, action) => {
   switch (action.type) {
     case 'INCREMENT':
@@ -2403,14 +2402,14 @@ const rootReducer = (state = initialState, action) => {
       return state;
   }
 };
+```
 </details>
 <details> <summary><strong>149. Explain Lazy Loading in Detail in React JS</strong></summary>
 Lazy loading in React allows components to be loaded only when needed, reducing the initial loading time.
 
 Example:
 
-javascript
-Copy code
+```javascript
 const MyComponent = React.lazy(() => import('./MyComponent'));
 
 const App = () => (
@@ -2418,6 +2417,7 @@ const App = () => (
     <MyComponent />
   </Suspense>
 );
+```
 </details>
 <details> <summary><strong>150. What Are the Limitations of React JS?</strong></summary>
 Some limitations of React include:
@@ -2442,19 +2442,18 @@ Component-Based: Components can be reused, leading to better code maintainabilit
 Virtual DOM: React uses a virtual DOM to improve performance by reducing unnecessary DOM manipulations.
 Example:
 
-javascript
-Copy code
+```javascript
 function MyComponent() {
   return <h1>Hello, world!</h1>;
 }
+```
 </details>
 <details> <summary><strong>153. How to Set Initial Value in Redux?</strong></summary>
 The initial value in Redux is set in the reducer by defining the initial state.
 
 Example:
 
-javascript
-Copy code
+```javascript
 const initialState = { count: 0 };
 
 const counterReducer = (state = initialState, action) => {
@@ -2465,48 +2464,48 @@ const counterReducer = (state = initialState, action) => {
       return state;
   }
 };
+```
 </details>
 <details> <summary><strong>154. What is SVG in HTML?</strong></summary>
 SVG (Scalable Vector Graphics) is an XML-based format for vector images. It allows images to scale without losing quality, making it ideal for responsive designs.
 
 Example:
 
-html
-Copy code
+```html
 <svg width="100" height="100">
   <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red" />
 </svg>
+```
 </details>
 <details> <summary><strong>155. What is Charset in HTML?</strong></summary>
 Charset (Character Set) defines the character encoding used to display text in a webpage. It ensures the text is rendered correctly.
 
 Example:
 
-html
-Copy code
+```html
 <meta charset="UTF-8">
+```
 </details>
 <details> <summary><strong>156. What is the Drag and Drop API in HTML5?</strong></summary>
 The Drag and Drop API allows users to drag elements within the browser and drop them into a different location. It's commonly used for file uploads or rearranging UI components.
 
 Example:
 
-html
-Copy code
+```html
 <div id="dragElement" draggable="true">Drag me</div>
-javascript
-Copy code
+```
+```javascript
 document.getElementById("dragElement").addEventListener("dragstart", (event) => {
   event.dataTransfer.setData("text", event.target.id);
 });
+```
 </details>
 <details> <summary><strong>157. What is Canvas in HTML5?</strong></summary>
 The <canvas> element in HTML5 is used to draw graphics, such as images, shapes, and animations, using JavaScript.
 
 Example:
 
-html
-Copy code
+```html
 <canvas id="myCanvas" width="500" height="500"></canvas>
 <script>
   var canvas = document.getElementById('myCanvas');
@@ -2514,25 +2513,25 @@ Copy code
   ctx.fillStyle = 'green';
   ctx.fillRect(10, 10, 150, 100);
 </script>
+```
 </details>
 <details> <summary><strong>158. What is the Difference Between 2nd and 3rd Line for Below Code Snippet in React JS</strong></summary>
 The second line of the code (setState('rohit patel');) updates the state, while the third line (state = 'rohit patel';) directly modifies the state variable, which is not allowed in React because state should not be mutated directly.
 
 Code Snippet:
 
-javascript
-Copy code
+```javascript
 let [state, setState] = useState('rohit');
 setState('rohit patel');  // Correct way to update state
 state = 'rohit patel';    // Incorrect way, direct mutation of state
+```
 </details>
 <details> <summary><strong>159. Create Todo App and Implement These Functionalities (Add Todo, Complete Todo, Edit Todo, Delete Todo)</strong></summary>
 A simple Todo App in React can be implemented using state and event handlers.
 
 Example:
 
-javascript
-Copy code
+```javascript
 import React, { useState } from 'react';
 
 function TodoApp() {
@@ -2579,14 +2578,14 @@ function TodoApp() {
     </div>
   );
 }
+```
 </details>
 <details> <summary><strong>160. Create Counter App and Implement These Functionalities (Start Counter, Pause Counter, Reset Counter)</strong></summary>
 A simple counter app can be created using React state and setInterval.
 
 Example:
 
-javascript
-Copy code
+```javascript
 import React, { useState, useEffect } from 'react';
 
 function CounterApp() {
@@ -2617,6 +2616,7 @@ function CounterApp() {
     </div>
   );
 }
+```
 </details>
 
 <details> <summary><strong>161. What is Selectors in CSS?</strong></summary>
@@ -2624,8 +2624,7 @@ CSS selectors are used to select and style HTML elements. These selectors target
 
 Example:
 
-css
-Copy code
+```css
 /* Select all paragraphs */
 p {
   color: blue;
@@ -2640,14 +2639,14 @@ p {
 .button {
   padding: 10px;
 }
+```
 </details>
 <details> <summary><strong>162. What is Sass in CSS?</strong></summary>
 Sass (Syntactically Awesome Stylesheets) is a CSS preprocessor that extends CSS with features like variables, nested rules, and mixins, which make writing CSS more efficient.
 
 Example:
 
-scss
-Copy code
+```scss
 $primary-color: #3498db;
 
 .header {
@@ -2656,6 +2655,7 @@ $primary-color: #3498db;
     color: white;
   }
 }
+```
 </details>
 <details> <summary><strong>163. Explain Features of React JS</strong></summary>
 React JS offers several features, including:
@@ -2677,8 +2677,7 @@ React Window and React Virtualization are libraries used to efficiently render l
 
 Example using React Window:
 
-javascript
-Copy code
+```javascript
 import { FixedSizeList as List } from 'react-window';
 
 function App() {
@@ -2691,14 +2690,14 @@ function App() {
     </List>
   );
 }
+```
 </details>
 <details> <summary><strong>166. What is Forward Ref in React JS?</strong></summary>
 forwardRef is a higher-order component that allows you to forward a ref from a parent component to a child component.
 
 Example:
 
-javascript
-Copy code
+```javascript
 const Input = React.forwardRef((props, ref) => {
   return <input ref={ref} {...props} />;
 });
@@ -2707,28 +2706,28 @@ function Parent() {
   const inputRef = useRef();
   return <Input ref={inputRef} />;
 }
+```
 </details>
 <details> <summary><strong>167. Explain SetState is Synchronous or Asynchronous in UseState Hook</strong></summary>
 setState in React (when using useState) is asynchronous, meaning it doesn't immediately update the state after it is called. React batches state updates to optimize performance.
 
 Example:
 
-javascript
-Copy code
+```javascript
 const [count, setCount] = useState(0);
 
 const increment = () => {
   setCount(count + 1); // This will be batched
   console.log(count);   // Logs the old state value
 };
+```
 </details>
 <details> <summary><strong>168. Create Custom Hook for API Call</strong></summary>
 A custom hook can be created to abstract away the logic for making API calls in React components.
 
 Example:
 
-javascript
-Copy code
+```javascript
 import { useState, useEffect } from 'react';
 
 function useFetch(url) {
@@ -2753,6 +2752,7 @@ function App() {
   if (loading) return <div>Loading...</div>;
   return <div>{JSON.stringify(data)}</div>;
 }
+```
 </details>
 <details> <summary><strong>169. What is Accessibility?</strong></summary>
 Accessibility in web development refers to the practice of making websites usable by people with various disabilities, such as visual impairments, hearing loss, or mobility challenges.
@@ -2766,8 +2766,7 @@ The position property in CSS specifies how an element is positioned on the page.
 
 Example:
 
-css
-Copy code
+```css
 /* Absolute positioning */
 .absolute {
   position: absolute;
@@ -2781,6 +2780,7 @@ Copy code
   bottom: 0;
   right: 0;
 }
+```
 </details>
 
 <details> <summary><strong>171. What is React Fiber?</strong></summary>
@@ -2795,32 +2795,31 @@ Inline Elements: Do not start on a new line and only take up as much width as ne
 Block Elements: Start on a new line and take up the full width available (e.g., <div>, <p>).
 Example:
 
-html
-Copy code
+```html
 <p>This is a block element</p>
 <span>This is an inline element</span>
+```
 </details>
 <details> <summary><strong>173. Difference Between Normal Export and Default Export</strong></summary>
 Normal Export: You can export multiple variables, functions, or objects.
 
-javascript
-Copy code
+```javascript
 export const x = 10;
 export function add() { return 5; }
+```
 Default Export: Only one export per file, and it can be imported without curly braces.
 
-javascript
-Copy code
+```javascript
 const x = 10;
 export default x;
+```
 </details>
 <details> <summary><strong>174. Create Todo App and Implement These Functionalities (Add Todo, Complete Todo, Edit Todo, Delete Todo)</strong></summary>
 A simple Todo app in React can be created with the following functionalities:
 
 Example:
 
-javascript
-Copy code
+```javascript
 import React, { useState } from 'react';
 
 function TodoApp() {
@@ -2876,4 +2875,5 @@ function TodoApp() {
     </div>
   );
 }
+```
 </details>
