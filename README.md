@@ -1,5 +1,209 @@
 # React.js-Interview-Questions
 
+<details> <summary><strong>1. How to create custom hooks</strong></summary>
+React Hooks are a powerful feature in React that allow developers to use state and other React features in functional components. Creating custom hooks can help you extract reusable logic from your components, making them more maintainable and easier to understand. Here's a step-by-step guide on how to create custom hooks in React:
+
+Example:
+
+javascript
+Copy code
+import { useState, useEffect } from 'react';
+
+function useFetch(url) {
+  const [data, setData] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    fetch(url)
+      .then((response) => response.json())
+      .then((data) => {
+        setData(data);
+        setLoading(false);
+      })
+      .catch((error) => {
+        setError(error);
+        setLoading(false);
+      });
+  }, [url]);
+
+  return { data, loading, error };
+}
+
+// Using custom hook in a component
+function App() {
+  const { data, loading, error } = useFetch('https://api.example.com/data');
+  if (loading) return <div>Loading...</div>;
+  if (error) return <div>Error: {error.message}</div>;
+  return <div>{JSON.stringify(data)}</div>;
+}
+</details>
+<details> <summary><strong>2. How to React Update DOM?</strong></summary>
+React updates the DOM efficiently through a process called "reconciliation." When the state or props of a component change, React updates the virtual DOM first, then compares it with the real DOM to determine what needs to be updated, resulting in minimal changes to the real DOM.
+
+</details>
+<details> <summary><strong>3. What is VDOM in React.js?</strong></summary>
+The Virtual DOM (VDOM) is an in-memory representation of the real DOM elements. It allows React to update the UI without directly manipulating the real DOM, making updates more efficient.
+
+</details>
+<details> <summary><strong>4. State Management in React</strong></summary>
+State management in React can be done using useState, useReducer, or external libraries like Redux to manage global state. useState is used for managing component-specific states, while useReducer is often used for more complex state logic.
+
+Example:
+
+javascript
+Copy code
+const [count, setCount] = useState(0);
+
+const increment = () => {
+  setCount(count + 1);
+};
+</details>
+<details> <summary><strong>5. What is Prop Drilling?</strong></summary>
+Prop drilling is the process of passing data from a parent component to a deeply nested child component through props. This can become cumbersome when dealing with deeply nested components, leading to less maintainable code.
+
+</details>
+<details> <summary><strong>6. What is Redux?</strong></summary>
+Redux is a state management library for JavaScript apps that helps manage and centralize application state. It uses a single store and actions to manage state transitions.
+
+Example:
+
+javascript
+Copy code
+const initialState = { count: 0 };
+
+function reducer(state = initialState, action) {
+  switch (action.type) {
+    case 'INCREMENT':
+      return { count: state.count + 1 };
+    default:
+      return state;
+  }
+}
+</details>
+<details> <summary><strong>7. What is Middleware in Redux?</strong></summary>
+Middleware in Redux is used to extend Redux with custom functionality like logging, API calls, and error handling. It intercepts actions before they reach the reducer.
+
+Example:
+
+javascript
+Copy code
+const loggerMiddleware = store => next => action => {
+  console.log('Dispatching', action);
+  return next(action);
+};
+</details>
+<details> <summary><strong>8. What is Webpack?</strong></summary>
+Webpack is a module bundler for JavaScript applications. It bundles JavaScript files and assets like images, CSS, and fonts into optimized files for deployment.
+
+</details>
+<details> <summary><strong>9. How to use styles in React.js?</strong></summary>
+Styles in React can be applied in various ways: inline styles, CSS files, CSS modules, or CSS-in-JS solutions like styled-components.
+
+Example of inline style:
+
+javascript
+Copy code
+const style = { color: 'blue', fontSize: '20px' };
+return <div style={style}>Hello World!</div>;
+</details>
+<details> <summary><strong>10. How to Handle Form and Its Validation in React?</strong></summary>
+Forms in React are controlled components, meaning React controls the state of the form elements. You can validate form data either manually or using third-party libraries like Formik or React Hook Form.
+
+Example:
+
+javascript
+Copy code
+const [email, setEmail] = useState('');
+const [error, setError] = useState('');
+
+const validateEmail = () => {
+  if (!email.includes('@')) {
+    setError('Invalid email');
+  } else {
+    setError('');
+  }
+};
+
+return (
+  <form>
+    <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+    <button onClick={validateEmail}>Submit</button>
+    {error && <p>{error}</p>}
+  </form>
+);
+</details>
+<details> <summary><strong>11. What is Context API in React?</strong></summary>
+The Context API is a React feature that allows you to share state or values between components without having to pass props manually through every level of the component tree.
+
+Example:
+
+javascript
+Copy code
+const MyContext = React.createContext();
+
+function Parent() {
+  const value = 'Hello World';
+  return (
+    <MyContext.Provider value={value}>
+      <Child />
+    </MyContext.Provider>
+  );
+}
+
+function Child() {
+  const value = useContext(MyContext);
+  return <div>{value}</div>;
+}
+</details>
+<details> <summary><strong>12. Explain Local Storage and Session Storage and How to Secure Both Storages</strong></summary>
+Local Storage stores data without an expiration time and persists even after the browser is closed.
+Session Storage stores data for the duration of the page session.
+Both can be accessed through JavaScript, but sensitive data should be encrypted before storage to ensure security.
+
+Example:
+
+javascript
+Copy code
+localStorage.setItem('user', JSON.stringify({ name: 'John' }));
+const user = JSON.parse(localStorage.getItem('user'));
+</details>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <details>
   <summary><strong>How to create custom hooks</strong></summary>
   
