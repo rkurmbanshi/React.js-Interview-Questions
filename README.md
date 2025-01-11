@@ -5,8 +5,8 @@ React Hooks are a powerful feature in React that allow developers to use state a
 
 Example:
 
-javascript
-Copy code
+```javascript
+
 import { useState, useEffect } from 'react';
 
 function useFetch(url) {
@@ -37,6 +37,7 @@ function App() {
   if (error) return <div>Error: {error.message}</div>;
   return <div>{JSON.stringify(data)}</div>;
 }
+```
 </details>
 <details> <summary><strong>2. How to React Update DOM?</strong></summary>
 React updates the DOM efficiently through a process called "reconciliation." When the state or props of a component change, React updates the virtual DOM first, then compares it with the real DOM to determine what needs to be updated, resulting in minimal changes to the real DOM.
