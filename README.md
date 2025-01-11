@@ -52,8 +52,7 @@ State management in React can be done using useState, useReducer, or external li
 
 Example:
 
-javascript
-Copy code
+```javascript
 const [count, setCount] = useState(0);
 
 const increment = () => {
@@ -62,15 +61,14 @@ const increment = () => {
 </details>
 <details> <summary><strong>5. What is Prop Drilling?</strong></summary>
 Prop drilling is the process of passing data from a parent component to a deeply nested child component through props. This can become cumbersome when dealing with deeply nested components, leading to less maintainable code.
-
+```
 </details>
 <details> <summary><strong>6. What is Redux?</strong></summary>
 Redux is a state management library for JavaScript apps that helps manage and centralize application state. It uses a single store and actions to manage state transitions.
 
 Example:
 
-javascript
-Copy code
+```javascript
 const initialState = { count: 0 };
 
 function reducer(state = initialState, action) {
@@ -81,18 +79,19 @@ function reducer(state = initialState, action) {
       return state;
   }
 }
+```
 </details>
 <details> <summary><strong>7. What is Middleware in Redux?</strong></summary>
 Middleware in Redux is used to extend Redux with custom functionality like logging, API calls, and error handling. It intercepts actions before they reach the reducer.
 
 Example:
 
-javascript
-Copy code
+```javascript
 const loggerMiddleware = store => next => action => {
   console.log('Dispatching', action);
   return next(action);
 };
+```
 </details>
 <details> <summary><strong>8. What is Webpack?</strong></summary>
 Webpack is a module bundler for JavaScript applications. It bundles JavaScript files and assets like images, CSS, and fonts into optimized files for deployment.
@@ -103,18 +102,17 @@ Styles in React can be applied in various ways: inline styles, CSS files, CSS mo
 
 Example of inline style:
 
-javascript
-Copy code
+```javascript
 const style = { color: 'blue', fontSize: '20px' };
 return <div style={style}>Hello World!</div>;
+```
 </details>
 <details> <summary><strong>10. How to Handle Form and Its Validation in React?</strong></summary>
 Forms in React are controlled components, meaning React controls the state of the form elements. You can validate form data either manually or using third-party libraries like Formik or React Hook Form.
 
 Example:
 
-javascript
-Copy code
+```javascript
 const [email, setEmail] = useState('');
 const [error, setError] = useState('');
 
@@ -133,14 +131,14 @@ return (
     {error && <p>{error}</p>}
   </form>
 );
+```
 </details>
 <details> <summary><strong>11. What is Context API in React?</strong></summary>
 The Context API is a React feature that allows you to share state or values between components without having to pass props manually through every level of the component tree.
 
 Example:
 
-javascript
-Copy code
+```javascript
 const MyContext = React.createContext();
 
 function Parent() {
@@ -156,6 +154,7 @@ function Child() {
   const value = useContext(MyContext);
   return <div>{value}</div>;
 }
+```
 </details>
 <details> <summary><strong>12. Explain Local Storage and Session Storage and How to Secure Both Storages</strong></summary>
 Local Storage stores data without an expiration time and persists even after the browser is closed.
@@ -164,18 +163,17 @@ Both can be accessed through JavaScript, but sensitive data should be encrypted 
 
 Example:
 
-javascript
-Copy code
+```javascript
 localStorage.setItem('user', JSON.stringify({ name: 'John' }));
 const user = JSON.parse(localStorage.getItem('user'));
+```
 </details>
 <details> <summary><strong>13. What are Web Workers?</strong></summary>
 Web Workers allow JavaScript to run in the background without blocking the main thread. This is useful for handling complex or time-consuming tasks like data processing.
 
 Example:
 
-javascript
-Copy code
+```javascript
 const worker = new Worker('worker.js');
 
 worker.postMessage('start');
@@ -183,7 +181,9 @@ worker.postMessage('start');
 worker.onmessage = function(e) {
   console.log('Message from worker: ' + e.data);
 };
-worker.js
+```
+```javascript
+//worker.js
 
 javascript
 Copy code
@@ -192,6 +192,7 @@ onmessage = function(e) {
     postMessage('Worker started!');
   }
 };
+```
 </details>
 <details> <summary><strong>14. What is PWA (Progressive Web App)?</strong></summary>
 A Progressive Web App (PWA) is a web application that uses modern web capabilities to deliver an app-like experience to users, including offline access and push notifications.
@@ -206,25 +207,25 @@ API calls in React are typically made using the fetch API or libraries like Axio
 
 Example:
 
-javascript
-Copy code
+```javascript
 useEffect(() => {
   fetch('https://api.example.com/data')
     .then(response => response.json())
     .then(data => setData(data));
 }, []);
+```
 </details>
 <details> <summary><strong>17. What is Optimization and How to Implement it in React JS?</strong></summary>
 Optimization in React refers to techniques like memoization, lazy loading, and minimizing unnecessary re-renders to improve app performance. One such method is React.memo for functional components.
 
 Example of React.memo:
 
-javascript
-Copy code
+```javascript
 const MemoizedComponent = React.memo(function MyComponent({ name }) {
   console.log('Rendering', name);
   return <div>{name}</div>;
 });
+```
 </details>
 <details> <summary><strong>18. What is AMP (Accelerated Mobile Pages)?</strong></summary>
 AMP is an open-source framework designed to make mobile web pages load faster. It uses a stripped-down version of HTML and JavaScript to ensure quicker loading times, particularly for content-heavy pages.
@@ -243,8 +244,7 @@ The this keyword in JavaScript refers to the context in which the current code i
 
 Example:
 
-javascript
-Copy code
+```javascript
 const obj = {
   name: 'John',
   greet: function() {
@@ -252,32 +252,33 @@ const obj = {
   }
 };
 obj.greet();  // Output: John
+```
 </details>
 <details> <summary><strong>22. What is a Semantic Element?</strong></summary>
 Semantic HTML elements are those that clearly describe their meaning in a human- and machine-readable way. Examples include <article>, <section>, <header>, and <footer>.
 
 Example:
 
-html
-Copy code
+```javascript
 <article>
   <h1>Article Title</h1>
   <p>This is the content of the article.</p>
 </article>
+```
 </details>
 <details> <summary><strong>23. What is CSS Object?</strong></summary>
 A CSS object typically refers to an object in JavaScript that holds CSS properties and values. This can be used to dynamically apply styles to elements in React components.
 
 Example:
 
-javascript
-Copy code
+```javascript
 const style = {
   color: 'red',
   fontSize: '20px',
 };
 
 return <div style={style}>Hello, World!</div>;
+```
 </details>
 <details> <summary><strong>24. What is Redux?</strong></summary>
 Redux is a predictable state container for JavaScript apps. It helps you write applications that behave consistently across different environments, with debugging and testing capabilities.
