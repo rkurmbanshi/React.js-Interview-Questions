@@ -259,7 +259,7 @@ Semantic HTML elements are those that clearly describe their meaning in a human-
 
 Example:
 
-```javascript
+```html
 <article>
   <h1>Article Title</h1>
   <p>This is the content of the article.</p>
