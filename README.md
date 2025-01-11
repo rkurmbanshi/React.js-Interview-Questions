@@ -285,8 +285,7 @@ Redux is a predictable state container for JavaScript apps. It helps you write a
 
 Example:
 
-javascript
-Copy code
+  ```javascript
 const initialState = { count: 0 };
 
 function reducer(state = initialState, action) {
@@ -297,6 +296,7 @@ function reducer(state = initialState, action) {
       return state;
   }
 }
+```
 </details>
 <details> <summary><strong>25. What is Observable in Redux?</strong></summary>
 In Redux, an observable refers to a stream of data that can be observed, similar to how actions are dispatched in Redux. Observables are often used with middleware like Redux-Observable.
@@ -311,8 +311,7 @@ A Higher-Order Component is a function that takes a component and returns a new 
 
 Example:
 
-javascript
-Copy code
+  ```javascript
 function withLoader(Component) {
   return function WithLoader(props) {
     if (props.loading) {
@@ -321,6 +320,7 @@ function withLoader(Component) {
     return <Component {...props} />;
   };
 }
+```
 </details>
 
 <details> <summary><strong>28. Difference Between Map and Reduce</strong></summary>
@@ -328,18 +328,17 @@ Map: Creates a new array by applying a function to each element of the original 
 Reduce: Reduces the array to a single value by applying a function to each element, accumulating the result.
 Example of map:
 
-javascript
-Copy code
+  ```javascript
 const numbers = [1, 2, 3];
 const doubled = numbers.map(num => num * 2);
 console.log(doubled); // [2, 4, 6]
 Example of reduce:
-
-javascript
-Copy code
+```
+  ```javascript
 const numbers = [1, 2, 3];
 const sum = numbers.reduce((acc, num) => acc + num, 0);
 console.log(sum); // 6
+```
 </details>
 <details> <summary><strong>29. What is React JS and its Pros and Cons?</strong></summary>
 React is a JavaScript library for building user interfaces, primarily for single-page applications. It is declarative, component-based, and enables developers to create reusable UI components.
@@ -361,11 +360,11 @@ Batching refers to the process of grouping multiple updates into a single re-ren
 
 Example:
 
-javascript
-Copy code
+  ```javascript
 // React will batch these updates together and render only once
 setCount(count + 1);
 setFlag(!flag);
+```
 </details>
 <details> <summary><strong>31. What is Diffing and Reconciliation?</strong></summary>
 Diffing is the process React uses to compare the current Virtual DOM with the previous one and identify changes. Reconciliation is the process of updating the actual DOM to reflect the changes detected during the diffing process.
@@ -376,8 +375,7 @@ useRef is a React hook that allows you to persist a mutable value across renders
 
 Example:
 
-javascript
-Copy code
+  ```javascript
 const inputRef = useRef(null);
 
 useEffect(() => {
@@ -385,38 +383,38 @@ useEffect(() => {
 }, []);
 
 return <input ref={inputRef} />;
+```
 </details>
 <details> <summary><strong>33. What is Pure Component?</strong></summary>
 A PureComponent in React is a component that only re-renders when its props or state change. It implements shouldComponentUpdate with a shallow comparison of props and state.
 
 Example:
 
-javascript
-Copy code
+  ```javascript
 class MyComponent extends React.PureComponent {
   render() {
     return <div>{this.props.name}</div>;
   }
 }
+```
 </details>
 <details> <summary><strong>34. What is Pure Function?</strong></summary>
 A pure function is a function that always produces the same output given the same input and does not cause side effects (like modifying global state or performing IO operations).
 
 Example:
 
-javascript
-Copy code
+  ```javascript
 function add(a, b) {
   return a + b;  // Pure function, no side effects
 }
+```
 </details>
 <details> <summary><strong>35. What is useState?</strong></summary>
 useState is a hook that allows you to add state to functional components. It returns an array with the current state and a function to update it.
 
 Example:
 
-javascript
-Copy code
+  ```javascript
 const [count, setCount] = useState(0);
 
 return (
@@ -425,50 +423,50 @@ return (
     <button onClick={() => setCount(count + 1)}>Increment</button>
   </div>
 );
+```
 </details>
 <details> <summary><strong>36. What is useEffect?</strong></summary>
 useEffect is a hook that performs side effects in functional components. It can be used for tasks like fetching data, updating the DOM, or subscribing to external events.
 
 Example:
 
-javascript
-Copy code
+  ```javascript
 useEffect(() => {
   console.log('Component mounted');
   return () => {
     console.log('Component unmounted');
   };
 }, []);
+```
 </details>
 <details> <summary><strong>37. What is useSelector?</strong></summary>
 useSelector is a hook from React-Redux that allows you to extract data from the Redux store state.
 
 Example:
 
-javascript
-Copy code
+  ```javascript
 const count = useSelector(state => state.count);
+```
 </details>
 <details> <summary><strong>38. What is useDispatch?</strong></summary>
 useDispatch is a hook from React-Redux that gives you access to the dispatch function from Redux, which allows you to dispatch actions to the Redux store.
 
 Example:
 
-javascript
-Copy code
+  ```javascript
 const dispatch = useDispatch();
 
 const increment = () => {
   dispatch({ type: 'INCREMENT' });
 };
+```
 </details>
 <details> <summary><strong>39. How to Configure a Store and Create a Slice in Redux?</strong></summary>
 To configure a store and create a slice in Redux, you typically use Redux Toolkit, which simplifies store configuration and slice creation.
 
 Example:
 
-javascript
-Copy code
+  ```javascript
 import { configureStore, createSlice } from '@reduxjs/toolkit';
 
 const counterSlice = createSlice({
@@ -489,15 +487,16 @@ const store = configureStore({
 });
 
 export default store;
+```
 </details>
 <details> <summary><strong>40. What are Actions in Redux?</strong></summary>
 Actions in Redux are plain JavaScript objects that describe an event that has occurred. They must have a type property and may include other data in the payload.
 
 Example:
 
-javascript
-Copy code
+  ```javascript
 const incrementAction = { type: 'INCREMENT' };
+```
 </details>
 
 <details> <summary><strong>41. What is Saga?</strong></summary>
@@ -505,8 +504,7 @@ Redux-Saga is a middleware library used to handle side effects in Redux. It allo
 
 Example:
 
-javascript
-Copy code
+  ```javascript
 import { takeEvery, call, put } from 'redux-saga/effects';
 
 function* fetchData() {
@@ -522,24 +520,24 @@ function* fetchData() {
 function* watchFetchData() {
   yield takeEvery('FETCH_REQUEST', fetchData);
 }
+```
 </details>
 <details> <summary><strong>42. What is Shadow DOM?</strong></summary>
 The Shadow DOM is a web standard that allows developers to encapsulate DOM and CSS styles within a component, creating a local scope for styles and structure.
 
 Example:
 
-javascript
-Copy code
+  ```javascript
 const shadowRoot = document.querySelector('#shadow-host').attachShadow({mode: 'open'});
 shadowRoot.innerHTML = '<p>Shadow DOM content</p>';
+```
 </details>
 <details> <summary><strong>43. Class vs Functional Component</strong></summary>
 Class Components: Traditional components with state, lifecycle methods, and can be extended from React.Component.
 Functional Components: Simpler components using hooks to manage state and side effects.
 Example of a class component:
 
-javascript
-Copy code
+  ```javascript
 class Counter extends React.Component {
   constructor(props) {
     super(props);
@@ -555,8 +553,9 @@ class Counter extends React.Component {
     );
   }
 }
+```
 Example of a functional component:
-
+  ```javascript
 javascript
 Copy code
 const Counter = () => {
@@ -569,22 +568,23 @@ const Counter = () => {
     </div>
   );
 };
+```
 </details>
 <details> <summary><strong>44. useMemo vs React.memo</strong></summary>
 useMemo: A hook that memoizes a function’s result to avoid expensive recalculations on each render.
 React.memo: A higher-order component that memoizes a functional component, preventing unnecessary re-renders when props haven’t changed.
 Example of useMemo:
 
-javascript
-Copy code
+  ```javascript
 const expensiveCalculation = useMemo(() => calculateExpensiveValue(a, b), [a, b]);
+```
 Example of React.memo:
 
-javascript
-Copy code
+  ```javascript
 const MyComponent = React.memo(({ name }) => {
   return <p>{name}</p>;
 });
+```
 </details>
 <details> <summary><strong>45. What is the Lifecycle in the Class Component?</strong></summary>
 The lifecycle of a class component in React consists of the following phases:
@@ -605,19 +605,18 @@ shouldComponentUpdate() is a lifecycle method in class components that allows yo
 
 Example:
 
-javascript
-Copy code
+  ```javascript
 shouldComponentUpdate(nextProps, nextState) {
   return nextState.count !== this.state.count;  // Prevent re-render if count hasn't changed
 }
+```
 </details>
 <details> <summary><strong>47. State vs Props</strong></summary>
 State: A local data storage for a component that can change over time.
 Props: Read-only values passed from a parent component to a child component.
 Example:
 
-javascript
-Copy code
+  ```javascript
 const Parent = () => {
   const message = "Hello from parent!";
   return <Child message={message} />;
@@ -626,14 +625,14 @@ const Parent = () => {
 const Child = (props) => {
   return <p>{props.message}</p>; // Props are passed down from Parent
 };
+```
 </details>
 <details> <summary><strong>48. How to Pass Data from Child to Parent Component?</strong></summary>
 To pass data from a child to a parent component, you can use a callback function that the parent passes to the child as a prop.
 
 Example:
 
-javascript
-Copy code
+  ```javascript
 const Parent = () => {
   const handleData = (data) => {
     console.log(data); // Receiving data from child
@@ -645,45 +644,46 @@ const Parent = () => {
 const Child = ({ sendData }) => {
   return <button onClick={() => sendData("Hello from child!")}>Send Data</button>;
 };
+```
 </details>
 <details> <summary><strong>49. What are Controlled and Uncontrolled Components?</strong></summary>
 Controlled Component: A component whose form elements are controlled by React state.
 Uncontrolled Component: A component that manages its own state internally using ref.
 Controlled Component Example:
 
-javascript
-Copy code
+  ```javascript
 const ControlledInput = () => {
   const [value, setValue] = useState('');
   return <input value={value} onChange={(e) => setValue(e.target.value)} />;
 };
+```
 Uncontrolled Component Example:
 
-javascript
-Copy code
+  ```javascript
 const UncontrolledInput = () => {
   const inputRef = useRef();
   return <input ref={inputRef} />;
 };
+```
 </details>
 <details> <summary><strong>50. What is Stateless and Stateful Component?</strong></summary>
 Stateless Component: A component that does not manage its own state. It only receives data via props.
 Stateful Component: A component that manages its own state using useState or class-based state.
 Stateful Component Example:
 
-javascript
-Copy code
+  ```javascript
 const StatefulComponent = () => {
   const [count, setCount] = useState(0);
   return <button onClick={() => setCount(count + 1)}>{count}</button>;
 };
+```
 Stateless Component Example:
 
-javascript
-Copy code
+  ```javascript
 const StatelessComponent = ({ message }) => {
   return <p>{message}</p>;
 };
+```
 </details>
 
 <details> <summary><strong>51. What is Prop Drilling?</strong></summary>
@@ -691,8 +691,7 @@ Prop drilling refers to the process of passing data from a parent component to a
 
 Example:
 
-javascript
-Copy code
+  ```javascript
 const Parent = () => {
   const message = "Hello from Parent!";
   return <Intermediate message={message} />;
@@ -705,37 +704,37 @@ const Intermediate = ({ message }) => {
 const Child = ({ message }) => {
   return <p>{message}</p>;
 };
+```
 </details>
 <details> <summary><strong>52. How to Manage API Calls in React JS?</strong></summary>
 In React, API calls can be managed using hooks like useEffect combined with fetch or libraries like axios to handle asynchronous operations.
 
 Example using fetch:
 
-javascript
-Copy code
+  ```javascript
 useEffect(() => {
   fetch('https://api.example.com/data')
     .then(response => response.json())
     .then(data => setData(data))
     .catch(error => console.error('Error fetching data:', error));
 }, []);
+```
 Example using axios:
 
-javascript
-Copy code
+  ```javascript
 useEffect(() => {
   axios.get('https://api.example.com/data')
     .then(response => setData(response.data))
     .catch(error => console.error('Error fetching data:', error));
 }, []);
+```
 </details>
 <details> <summary><strong>53. Which Lifecycle Method Performs an API Call?</strong></summary>
 In class components, you would typically perform an API call inside the componentDidMount() lifecycle method, which is called once after the component has been mounted. In functional components, you can use useEffect for the same purpose.
 
 Example in class component:
 
-javascript
-Copy code
+  ```javascript
 class MyComponent extends React.Component {
   componentDidMount() {
     fetch('https://api.example.com/data')
@@ -747,10 +746,9 @@ class MyComponent extends React.Component {
     return <div>{this.state.data}</div>;
   }
 }
+```
 Example in functional component using useEffect:
-
-javascript
-Copy code
+  ```javascript
 const MyComponent = () => {
   const [data, setData] = useState(null);
 
@@ -762,6 +760,7 @@ const MyComponent = () => {
 
   return <div>{data}</div>;
 };
+```
 </details>
 <details> <summary><strong>54. How Many Ways to Use CSS?</strong></summary>
 There are several ways to apply CSS in React components:
@@ -773,25 +772,24 @@ Styled-components
 SASS or SCSS
 Example of inline styles:
 
-javascript
-Copy code
+  ```javascript
 const style = { color: 'blue', fontSize: '20px' };
 return <p style={style}>Styled Paragraph</p>;
+```
 Example of CSS Module:
 
-javascript
-Copy code
+  ```javascript
 import styles from './MyComponent.module.css';
 
 return <p className={styles.paragraph}>Styled with CSS Module</p>;
+```
 </details>
 <details> <summary><strong>55. What is Box-Sizing in CSS?</strong></summary>
 The box-sizing property defines how the total width and height of an element are calculated. By default, the width and height include only the content area, but setting box-sizing: border-box includes padding and border in the width/height calculation.
 
 Example:
 
-css
-Copy code
+  ```css
 div {
   width: 200px;
   height: 100px;
@@ -799,75 +797,75 @@ div {
   border: 5px solid black;
   box-sizing: border-box; /* Includes padding and border in the width and height */
 }
+```
 </details>
 <details> <summary><strong>56. Absolute vs Relative Position in CSS</strong></summary>
 absolute positioning: An element is positioned relative to its closest positioned ancestor (non-static).
 relative positioning: An element is positioned relative to its normal position in the document flow.
 Example of absolute positioning:
 
-css
-Copy code
+  ```css
 .absolute {
   position: absolute;
   top: 20px;
   left: 30px;
 }
+```
 Example of relative positioning:
 
-css
-Copy code
+  ```css
 .relative {
   position: relative;
   top: 10px;
   left: 20px;
 }
+```
 </details>
 <details> <summary><strong>57. What is Pseudo Class in CSS?</strong></summary>
 A pseudo-class in CSS is used to define a special state of an element, like :hover, :focus, :active, etc.
 
 Example:
 
-css
-Copy code
+  ```css
 button:hover {
   background-color: green; /* Changes background color when button is hovered */
 }
+```
 </details>
 <details> <summary><strong>58. What is Modules CSS?</strong></summary>
 CSS Modules is a way to scope CSS locally to a component in React. It avoids global CSS conflicts by giving each class a unique identifier.
 
 Example:
 
-css
-Copy code
+  ```css
 /* MyComponent.module.css */
 .container {
   background-color: blue;
 }
-javascript
-Copy code
+```
+  ```javascript
 import styles from './MyComponent.module.css';
 
 const MyComponent = () => {
   return <div className={styles.container}>Content</div>;
 };
+```
 </details>
 <details> <summary><strong>59. Difference Between Reset vs Normalized CSS?</strong></summary>
 Reset CSS: Removes all default styling from elements, resulting in a blank canvas.
 Normalized CSS: Applies consistent styling across browsers while preserving useful default styles.
 Example of Reset CSS:
 
-css
-Copy code
+  ```css
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+```
 Example of Normalized CSS:
 
-css
-Copy code
+  ```css
 /* Normalize CSS Example */
 html {
   font-size: 100%;
@@ -876,24 +874,25 @@ html {
 body {
   line-height: 1.5;
 }
+```
 </details>
 <details> <summary><strong>60. What are Pseudo-Elements and Pseudo-Classes?</strong></summary>
 Pseudo-Elements: Target specific parts of an element like ::before, ::after, etc.
 Pseudo-Classes: Apply styles based on user interaction or element state like :hover, :focus, etc.
 Example of Pseudo-Element:
 
-css
-Copy code
+  ```css
 p::before {
   content: "Prefix: ";
 }
+```
 Example of Pseudo-Class:
 
-css
-Copy code
+  ```css
 a:hover {
   color: red; /* Changes color when the link is hovered */
 }
+```
 </details>
 
 <details> <summary><strong>61. How to Call Multiple APIs at Once?</strong></summary>
@@ -901,8 +900,7 @@ To call multiple APIs concurrently in JavaScript, you can use Promise.all() whic
 
 Example:
 
-javascript
-Copy code
+  ```javascript
 const fetchData = async () => {
   try {
     const [data1, data2] = await Promise.all([
@@ -918,14 +916,14 @@ const fetchData = async () => {
 useEffect(() => {
   fetchData();
 }, []);
+```
 </details>
 <details> <summary><strong>62. What is Redux?</strong></summary>
 Redux is a state management library for JavaScript apps that provides a predictable state container, allowing developers to manage app state in a centralized store.
 
 Example:
 
-javascript
-Copy code
+  ```javascript
 // Action
 const increment = () => ({
   type: 'INCREMENT'
@@ -947,14 +945,14 @@ const store = Redux.createStore(counter);
 // Dispatch action
 store.dispatch(increment());
 console.log(store.getState()); // 1
+```
 </details>
 <details> <summary><strong>63. What is Middleware in Redux?</strong></summary>
 Middleware in Redux provides a way to intercept and modify actions before they reach the reducer. It's useful for handling asynchronous actions, logging, or other side effects.
 
 Example using redux-thunk (for asynchronous actions):
 
-javascript
-Copy code
+  ```javascript
 const fetchData = () => {
   return async dispatch => {
     const response = await fetch('https://api.example.com/data');
@@ -962,14 +960,14 @@ const fetchData = () => {
     dispatch({ type: 'SET_DATA', payload: data });
   };
 };
+```
 </details>
 <details> <summary><strong>64. What is Webpack?</strong></summary>
 Webpack is a module bundler for JavaScript applications. It bundles JavaScript files, CSS, images, and other assets into one or more output files that can be served by a web server.
 
 Example of a basic Webpack configuration:
 
-javascript
-Copy code
+  ```javascript
 const path = require('path');
 
 module.exports = {
@@ -987,14 +985,14 @@ module.exports = {
     ]
   }
 };
+```
 </details>
 <details> <summary><strong>65. How to Use Styles in React JS?</strong></summary>
 In React, you can apply styles using various methods such as inline styles, CSS files, CSS modules, and styled-components.
 
 Example using inline styles:
 
-javascript
-Copy code
+  ```javascript
 const buttonStyle = {
   backgroundColor: 'blue',
   color: 'white',
@@ -1002,10 +1000,10 @@ const buttonStyle = {
 };
 
 return <button style={buttonStyle}>Click Me</button>;
+```
 Example using styled-components:
 
-javascript
-Copy code
+  ```javascript
 import styled from 'styled-components';
 
 const Button = styled.button`
@@ -1015,6 +1013,7 @@ const Button = styled.button`
 `;
 
 return <Button>Click Me</Button>;
+```
 </details>
 <details> <summary><strong>66. How to Handle Form and its Validation in React?</strong></summary>
 In React, form handling can be done using controlled components, where form data is managed in the component’s state, and validation can be added with conditionals or using third-party libraries like Formik or react-hook-form.
